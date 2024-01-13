@@ -1,5 +1,5 @@
 *
-!*.c
+!*[!main].c
 !*.h
 !README.md
 !.gitignore
