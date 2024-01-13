@@ -9,25 +9,24 @@ size_t binary_tree_height(const binary_tree_t *tree)
 {
 	if (!tree)
 		return (0);
-	return (find_height(tree));
+
+	return (find_height(tree) - 1);
 }
 
 /**
  * find_height - finds the height of a binary tree
  * @tree: pointer to the root node of the tree
- * Return: void
+ * Return: height of tree
  */
+
 int find_height(const binary_tree_t *tree)
 {
-	int height = 0;
+	int h_right = 0, h_left = 0;
 
-	while (tree->left || tree->right)
-	{
-		height++;
-		if (tree->left)
-			tree = tree->left;
-		else
-			tree = tree->right;
-	}
-	return (height);
+	if (!tree)
+		return (0);
+	h_left = find_height(tree->left);
+	h_right = find_height(tree->right);
+	return ((h_left > h_right) ? h_left + 1 : h_right + 1);
 }
+
