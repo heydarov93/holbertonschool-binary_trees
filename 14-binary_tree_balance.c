@@ -3,7 +3,7 @@
 /**
  * binary_tree_balance - measures the balance factor of a binary tree
  * @tree: ointer to the root node of the tree
- * Retrun: if tree NULL 0 else balance factor
+ * Return: if tree NULL 0 else balance factor
  */
 int binary_tree_balance(const binary_tree_t *tree)
 {
