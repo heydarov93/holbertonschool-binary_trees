@@ -1,4 +1,5 @@
 #include "binary_trees.h"
+#include "9-binary_tree_height.c"
 
 /**
  * binary_tree_is_perfect - Checks if a binary tree is perfect
@@ -6,6 +7,7 @@
  *
  * Return: 1 if the tree is perfect, 0 otherwise
  */
+
 int binary_tree_is_perfect(const binary_tree_t *tree)
 {
 	if (!tree)
